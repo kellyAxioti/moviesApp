@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Log in</title>
+
+</head>
+<style>
+     *{margin:0; padding:0;}
+ body{
+
+     background-color:peru;
+     font-family: Helvetica;
+}
+  .form-wrap{ width: 320px; background: #3e3d3d; padding: 40px 20px; box-sizing: border-box; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%);opacity:0.9;}
+        h1,p,a{text-align: center; color: #fff; font-weight: normal; margin-bottom: 20px; opacity:2; text-decoration:none; }
+
+        input{width: 100%; background: none; border: 1px solid #fff; border-radius: 3px; padding: 6px 15px; box-sizing: border-box; margin-bottom: 20px; font-size: 16px; color: #fff;  opacity:2; }
+
+        input[type="submit"]{ background: #A0522D; border: 0; cursor: pointer; color: #3e3d3d; opacity:2; }
+        input[type="submit"]:hover{ background: peru; transition: .6s; opacity:2; }
+
+        ::placeholder{color: #fff; opacity:2; }
+</style>
+<body>
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+<div class="form-wrap">
+   <h1>Sign in</h1>
+<form  th:action="@{/login}" method="post">
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>
+</form>
+</div>
+</body>
+</html>

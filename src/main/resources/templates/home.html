@@ -1,0 +1,52 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="style-form.css">
+</head>
+<style>
+     *{margin:0; padding:0;}
+ body{
+
+     background-image:url(cinema.jpg);
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     background-color:peru;
+     font-family: Helvetica;
+
+
+}
+  .form-wrap{ width: 320px; background: #3e3d3d; padding: 40px 20px; box-sizing: border-box; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%);opacity:0.9;}
+        h1,p,a{text-align: center; color: #fff; font-weight: normal; margin-bottom: 20px; opacity:2; text-decoration:none; }
+
+        input{width: 100%; background: none; border: 1px solid #fff; border-radius: 3px; padding: 6px 15px; box-sizing: border-box; margin-bottom: 20px; font-size: 16px; color: #fff;  opacity:2; }
+
+        input[type="button"]{ background: #A0522D; border: 0; cursor: pointer; color: #3e3d3d; opacity:2; }
+        input[type="button"]:hover{ background: peru; transition: .6s; opacity:2; }
+
+        ::placeholder{color: #fff; opacity:2; }
+</style>
+<body>
+<div class="form-wrap">
+
+
+
+
+    <h1>Sign Up</h1>
+    <form >
+        <p> Already have an account? <a style="text-decoration:underline;"  th:href="@{/hello}">Login</a></p>
+        <input type="text"  placeholder="Name">
+        <input type="text" placeholder="Username">
+        <input type="emai" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Confirm Password">
+        <input type="button" value="Sign up">
+
+    </form>
+</div>
+
+</body>
+</html>
