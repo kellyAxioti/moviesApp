@@ -1,6 +1,5 @@
 # Movie Search Application
-### The app presents a basic user login page using Java and  Springboot (creating dummy user - no database)
-### and a basic movies-search using vanilla javascript.
+### The app represents a basic user login page using Java and  Springboot (creating dummy user - no database) and a basic movies-search using vanilla javascript.
 ### Also, the data are being fetched from [OMDB API](http://www.omdbapi.com/) using AJAX
 
 ![Screenshot_1](https://user-images.githubusercontent.com/64276044/151700986-96654f08-a4ca-48f5-a6e3-e0e1d64e2d01.png)
